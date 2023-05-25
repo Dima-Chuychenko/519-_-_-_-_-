@@ -25,6 +25,9 @@ target_currency = input("Введіть код валюти, в яку ви хо
 amount = float(input("Введіть суму грошей, яку ви маєте: "))
 
 while source_currency:
+    if amount <= 0:
+        print("Введіть значення більше нуля для розрахунку валют.")
+        break
     if source_currency == target_currency.upper():
         print("Валюти однакові. Розрахунок не потрібен.")
     else:
